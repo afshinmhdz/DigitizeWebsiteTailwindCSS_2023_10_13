@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="rtl">
+<html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitize</title>
     <link rel="stylesheet" href="./build/tailwind.css" />
 </head>
-<body class="flex h-full justify-center">
-    <div class="bg-red-400 text-4xl w-80 text-white">سلام</div>
+
+<body class="bg-gray-100 px-4">
+    <!-- app bar -->
+    <div class="flex items-center justify-between mt-10 ">
+        <div class="">Digitize</div>
+        <div class="text-lg font-bold text-slate-800">ساعت هوشمند</div>
+        <div class="w-7 h-7 bg-white shadow-lg flex justify-center items-center rounded-md">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 stroke-slate-800">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+        </div>
+    </div>
+    <!-- filter section -->
+    <div class="flex items-center justify-between mt-7 gap-x-4">
+        <div class="flex  justify-between bg-white p-2 w-1/2 rounded">
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 stroke-orange-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25" />
+                </svg>
+
+            </div>
+            <button class="text-xs">محبوب ترین محصول</button>
+        </div>
+        <div class="flex bg-white p-2 w-1/2 rounded">
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 stroke-gray-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
+                </svg>
+
+            </div>
+            <button class="text-xs">فیلتر: برند اپل</button>
+        </div>
+    </div>
+    
 </body>
+
 </html>
