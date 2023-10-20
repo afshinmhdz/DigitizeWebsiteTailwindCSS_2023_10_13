@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitize</title>
     <link rel="stylesheet" href="./build/tailwind.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 
 <body class="bg-gray-100 px-4">
@@ -56,13 +57,34 @@
             <!-- product desc. -->
             <div class="flex items-center justify-between w-full mb-2">
                 <span class="text-slate-200 text-sm md:text-base">اپل</span>
-                <div class="">circle</div>
+                <div x-data="{ color: 'red' }" class="flex items-center">
+                    <div @click="color='red'" :class="color==='red' ? 'ring-1 ring-red-500' : ''" class=" flex justify-center items-center w-6 h-6 sm:w-8 sm:h-8 rounded-full cursor-pointer bg-red-500 border-2 border-white ">
+                        <svg x-show="color==='red'" xmlns="http://www.w3.org/2000/svg" class="w-4  h-4 sm:w-6 sm:h-6 stroke-white" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                            <g transform=""><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M19.98047,5.99023c-0.2598,0.00774 -0.50638,0.11632 -0.6875,0.30273l-10.29297,10.29297l-3.29297,-3.29297c-0.25082,-0.26124 -0.62327,-0.36647 -0.97371,-0.27511c-0.35044,0.09136 -0.62411,0.36503 -0.71547,0.71547c-0.09136,0.35044 0.01388,0.72289 0.27511,0.97371l4,4c0.39053,0.39037 1.02353,0.39037 1.41406,0l11,-11c0.29576,-0.28749 0.38469,-0.72707 0.22393,-1.10691c-0.16075,-0.37985 -0.53821,-0.62204 -0.9505,-0.60988z"></path></g></g></g>
+                            </svg>
+                    </div>
+                    <div @click="color='blue'" :class="color==='blue' ? 'ring-1 ring-blue-500' : ''" class=" flex justify-center items-center w-6 h-6 sm:w-8 sm:h-8 rounded-full cursor-pointer bg-blue-500 border-2 border-white -mr-1">
+                        <svg x-show="color==='blue'" xmlns="http://www.w3.org/2000/svg" class="w-4  h-4 sm:w-6 sm:h-6 stroke-white" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                            <g transform=""><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M19.98047,5.99023c-0.2598,0.00774 -0.50638,0.11632 -0.6875,0.30273l-10.29297,10.29297l-3.29297,-3.29297c-0.25082,-0.26124 -0.62327,-0.36647 -0.97371,-0.27511c-0.35044,0.09136 -0.62411,0.36503 -0.71547,0.71547c-0.09136,0.35044 0.01388,0.72289 0.27511,0.97371l4,4c0.39053,0.39037 1.02353,0.39037 1.41406,0l11,-11c0.29576,-0.28749 0.38469,-0.72707 0.22393,-1.10691c-0.16075,-0.37985 -0.53821,-0.62204 -0.9505,-0.60988z"></path></g></g></g>
+                            </svg>
+                    </div>
+                    <div @click="color='green'" :class="color==='green' ? 'ring-1 ring-green-500' : ''" class=" flex justify-center items-center w-6 h-6 sm:w-8 sm:h-8 rounded-full cursor-pointer bg-green-500 border-2 border-white -mr-1">
+                        <svg x-show="color==='green'" xmlns="http://www.w3.org/2000/svg" class="w-4  h-4 sm:w-6 sm:h-6 stroke-white" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                            <g transform=""><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M19.98047,5.99023c-0.2598,0.00774 -0.50638,0.11632 -0.6875,0.30273l-10.29297,10.29297l-3.29297,-3.29297c-0.25082,-0.26124 -0.62327,-0.36647 -0.97371,-0.27511c-0.35044,0.09136 -0.62411,0.36503 -0.71547,0.71547c-0.09136,0.35044 0.01388,0.72289 0.27511,0.97371l4,4c0.39053,0.39037 1.02353,0.39037 1.41406,0l11,-11c0.29576,-0.28749 0.38469,-0.72707 0.22393,-1.10691c-0.16075,-0.37985 -0.53821,-0.62204 -0.9505,-0.60988z"></path></g></g></g>
+                            </svg>
+                    </div>
+                    <div @click="color='black'" :class="color==='black' ? 'ring-1 ring-black' : ''" class=" flex justify-center items-center w-6 h-6 sm:w-8 sm:h-8 rounded-full cursor-pointer bg-black border-2 border-white -mr-1">
+                            <svg x-show="color==='black'" xmlns="http://www.w3.org/2000/svg" class="w-4  h-4 sm:w-6 sm:h-6 stroke-white" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                                <g transform=""><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M19.98047,5.99023c-0.2598,0.00774 -0.50638,0.11632 -0.6875,0.30273l-10.29297,10.29297l-3.29297,-3.29297c-0.25082,-0.26124 -0.62327,-0.36647 -0.97371,-0.27511c-0.35044,0.09136 -0.62411,0.36503 -0.71547,0.71547c-0.09136,0.35044 0.01388,0.72289 0.27511,0.97371l4,4c0.39053,0.39037 1.02353,0.39037 1.41406,0l11,-11c0.29576,-0.28749 0.38469,-0.72707 0.22393,-1.10691c-0.16075,-0.37985 -0.53821,-0.62204 -0.9505,-0.60988z"></path></g></g></g>
+                                </svg>
+                    </div>
+                </div>
             </div>
             <!-- product title -->
             <div class="text-slate-800 text-xs font-bold mb-2 md:text-base">ساعت هوشمند اپل سری ۶</div>
             <div class="text-orange-600 font-medium text-center text-sm mb-2 md:text-base">۴۸,۲۵۰,۰۰۰ ريال</div>
             <hr>
-            <button class="w-full font-bold text-orange-600 mt-2 md:text-lg" >مشاهده و سفارش</button>
+            <button class="w-full font-bold text-orange-600 mt-2 md:text-lg cursor-pointer" >مشاهده و سفارش</button>
         </div>
         <div class="bg-blue-100">2</div>
         <div class="bg-blue-100">3</div>
