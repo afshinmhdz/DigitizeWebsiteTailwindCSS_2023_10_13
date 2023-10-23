@@ -49,11 +49,52 @@
     </div>
     <div class=" grid grid-cols-12 md:grid-rows-[50px_minmax(500px,_1fr)] md:gap-8">
         <!-- sidebar -->
-        <div class="bg-white  hidden md:block p-4 col-span-4 lg:col-span-3 row-span-2 ">sidebar</div>
+        <div class=" hidden md:block  col-span-4 lg:col-span-3 row-span-2 ">
+            <div class="bg-white p-5 rounded-xl mb-5">
+                <div class="text-xl font-bold text-orange-500">دسته بندی</div>
+                <ul>
+                    <li class="flex items-center mb-1 cursor-pointer">
+                        <span class="relative w-7 h-7 rounded-full bg-gray-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke="currentColor"
+                                class="w-4 h-5 absolute bottom-0 left-1 stroke-orange-400" fill="none">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.125"
+                                    d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.625h-3" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.125"
+                                    d="M7 13.825A1.163 1.163 0 1 0 7 11.5a1.163 1.163 0 0 0 0 2.325Z" />
+                            </svg>
+                        </span>
+                        <span class="mr-2">تلفن همراه</span>
+                    </li>
+                    <li class="flex items-center mb-1 cursor-pointer">
+                        <span class="relative w-7 h-7 bg-gray-100 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-5 absolute bottom-0 left-1 stroke-orange-400" stroke="currentColor" fill="none">
+                                <path  stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.293 1.333H11.7c2.373 0 2.967.594 2.967 2.96v4.22c0 2.374-.594 2.96-2.96 2.96H4.293c-2.366.007-2.96-.586-2.96-2.953V4.294c0-2.367.594-2.96 2.96-2.96ZM8 11.48v3.187M1.333 8.666h13.334M5 14.666h6" />
+                            </svg>
+                        </span>
+                        <span class="mr-2">لپ تاپ</span>
+                    </li>
+                    <li class="flex items-center mb-1 cursor-pointer" >
+                        <span class="relative w-7 h-7 rounded-full bg-gray-100">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-5 absolute bottom-0 left-1 stroke-orange-400" fill="none"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".875"
+                                    d="M10.523 7.904c-.245.239-.385.583-.35.95.053.63.63 1.091 1.26 1.091h1.109v.695a2.198 2.198 0 0 1-2.194 2.193H3.652a2.198 2.198 0 0 1-2.194-2.193V6.714c0-1.208.986-2.193 2.194-2.193h6.696c1.208 0 2.194.985 2.194 2.193v.84h-1.179c-.326 0-.624.128-.84.35Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width=".875"
+                                    d="M1.458 7.239V4.573c0-.694.426-1.313 1.074-1.558l4.631-1.75c.724-.274 1.5.263 1.5 1.039V4.52M13.16 8.15v1.2c0 .322-.257.584-.584.596h-1.143c-.63 0-1.208-.461-1.26-1.091a1.172 1.172 0 0 1 .35-.95c.216-.222.513-.35.84-.35h1.213a.599.599 0 0 1 .583.594ZM4.083 7h4.084" />
+                            </svg>
+                        </span>
+                        <span class="mr-2">ساعت هوشمند</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <!-- sort section -->
         <div class="bg-white rounded-lg hidden md:block    col-span-8 lg:col-span-9 ">
 
-            <div x-data="{sort:1,activeClass:'text-slate-800'}" class=" px-4 flex items-center  gap-x-4 pt-1.5 mb-5 text-gray-400">
+            <div x-data="{sort:1,activeClass:'text-slate-800'}"
+                class=" px-4 flex items-center  gap-x-4 pt-1.5 mb-5 text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6 stroke-orange-500">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -63,11 +104,11 @@
                     <span>محبوب ترین</span>
                     <span x-show="sort===1" class="w-2 h-2 bg-orange-600 rounded-full absolute top-0 left-0"></span>
                 </button>
-                <button @click="sort=2" :class="sort===2 ? activeClass:''" class="py-2 relative"> 
+                <button @click="sort=2" :class="sort===2 ? activeClass:''" class="py-2 relative">
                     <span>گران ترین</span>
                     <span x-show="sort===2" class="w-2 h-2 bg-orange-600 rounded-full absolute top-0 left-0"></span>
                 </button>
-                <button @click="sort=3" :class="sort===3 ? activeClass:''" class="py-2 relative">  
+                <button @click="sort=3" :class="sort===3 ? activeClass:''" class="py-2 relative">
                     <span>ارزان ترین</span>
                     <span x-show="sort===3" class="w-2 h-2 bg-orange-600 rounded-full absolute top-0 left-0"></span>
                 </button>
@@ -190,7 +231,7 @@
                         <div x-text="product.price"
                             class="text-orange-600 font-bold text-center text-sm mb-3 sm:text-lg"></div>
                         <hr>
-                        <button class="w-full font-bold text-orange-600 mt-2 md:text-lg cursor-pointer">مشاهده و
+                        <button class="w-full rounded-lg font-bold text-orange-600 mt-2 md:text-lg cursor-pointer hover:bg-orange-400 hover:text-white transition ease-out duration-300">مشاهده و
                             سفارش</button>
                     </div>
                 </template>
