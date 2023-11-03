@@ -9,7 +9,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 
-<body class="bg-gray-100 px-2">
+<body class="bg-gray-100 ">
     <!-- app bar -->
     <div class="flex md:hidden items-center justify-between mt-8 ">
         <div class="">Digitize</div>
@@ -47,9 +47,44 @@
             <button class="text-xs px-.5">فیلتر: برند اپل</button>
         </div>
     </div>
-    <div class=" grid grid-cols-12 md:grid-rows-[50px_minmax(500px,_1fr)] md:gap-8">
+    <!-- main navBar section -->
+    <nav class="hidden md:block  p-2 mb-6  z-20  shadow-lg rounded sticky top-0  bg-white container mx-auto max-w-screen-xl">
+          <div class=" flex items-center  justify-between container mx-auto max-w-screen-xl ">
+            <ul class="flex items-center gap-x-2 lg:gap-x-4 lg:text-lg text-slate-800 ">
+                <li><a class="block px-4 py-2 hover:bg-gray-100 rounded transition-all duration-500" href="#">LOGO</a></li>
+                <li><a class="block px-4 py-2 hover:bg-gray-100 rounded transition-all duration-500" href="#">خانه</a></li>
+                <li><a class="block px-4 py-2 hover:bg-gray-100 rounded transition-all duration-500" href="#">تلفن همراه</a></li>
+                <li><a class="block px-4 py-2 hover:bg-gray-100 rounded transition-all duration-500" href="#">لپ تاپ</a></li>
+                <li><a class="block px-4 py-2 hover:bg-gray-100 rounded transition-all duration-500" href="#">ساعت هوشمند</a></li>
+            </ul>
+            <!-- search bar -->
+            <div class="flex-1 max-w-2xl">
+                 <div class="bg-gray-100 rounded-lg flex items-center">
+                    <span class="ml-3 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                          </svg>
+                    </span>
+                    <input type="text" class="focus:outline-none text-slate-800 w-full bg-transparent p-2" name="" id="" placeholder="جستجوی نام محصول ، نام برند ، نام مدل و ...">
+                 </div>
+            </div>
+          </div>
+        
+        <!-- <div class="w-3/5 flex justify-center items-center ">
+        
+                <div class="bg-gray-100 h-10 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                      </svg>
+                </div>
+                  
+            
+            <input type="text" placeholder="جستجوی نام محصول ، نام برند ، نام مدل و ..." class="bg-gray-100 rounded w-2/3  p-2 " >
+        </div>-->
+    </nav>
+    <div class="px-4 container mx-auto max-w-screen-xl grid grid-cols-12 md:grid-rows-[50px_minmax(500px,_1fr)] md:gap-8">
         <!-- sidebar -->
-        <div class=" hidden md:block  col-span-4 lg:col-span-3 row-span-2 ">
+        <div class=" hidden md:block  col-span-4  row-span-2 lg:col-span-3 xl:col-span-2 ">
             <div class="bg-white p-5 rounded-xl mb-5">
                 <div class="text-xl font-bold text-orange-500 mb-4">دسته بندی</div>
                 <ul>
@@ -195,7 +230,7 @@
             </div>
         </div>
         <!-- sort section -->
-        <div class="bg-white rounded-lg hidden md:block    col-span-8 lg:col-span-9 ">
+        <div class="bg-white rounded-lg hidden md:block col-span-8 lg:col-span-9  xl:col-span-10 ">
 
             <div x-data="{sort:1,activeClass:'text-slate-800'}"
                 class=" px-4 flex items-center  gap-x-4 pt-1.5 mb-5 text-gray-400">
@@ -223,8 +258,8 @@
             </div>
 
         </div>
-        <!-- product section -->
-        <div class=" col-span-12 md:col-span-8 lg:col-span-9">
+        <!-- content section -->
+        <div class="col-span-12 md:col-span-8 lg:col-span-9 xl:col-span-10" >
             <div x-data="{
            products:[
            {id:1,title:'ساعت هوشمند اپل سری 7',price:'۴۸,۲۵۰,۰۰۰ ريال',src:'/assets/images/appleWatch(1).png'},
@@ -343,8 +378,8 @@
 
             </div>
         </div>
-
-        <!-- product section -->
+    </div>    
+        <!-- content section -->
 
 </body>
 
