@@ -571,9 +571,6 @@ video {
 .mb-1{
   margin-bottom: 0.25rem;
 }
-.mb-10{
-  margin-bottom: 2.5rem;
-}
 .mb-16{
   margin-bottom: 4rem;
 }
@@ -600,6 +597,12 @@ video {
 }
 .ml-3{
   margin-left: 0.75rem;
+}
+.ml-4{
+  margin-left: 1rem;
+}
+.mr-10{
+  margin-right: 2.5rem;
 }
 .mr-2{
   margin-right: 0.5rem;
@@ -649,14 +652,14 @@ video {
 .h-7{
   height: 1.75rem;
 }
-.h-auto{
-  height: auto;
-}
 .max-h-\[calc\(100vh_-_90px\)\]{
   max-height: calc(100vh - 90px);
 }
 .w-1\/2{
   width: 50%;
+}
+.w-1\/4{
+  width: 25%;
 }
 .w-2{
   width: 0.5rem;
@@ -678,9 +681,6 @@ video {
 }
 .w-full{
   width: 100%;
-}
-.w-1\/4{
-  width: 25%;
 }
 .max-w-2xl{
   max-width: 42rem;
@@ -706,6 +706,12 @@ video {
 }
 .cursor-pointer{
   cursor: pointer;
+}
+.list-inside{
+  list-style-position: inside;
+}
+.list-disc{
+  list-style-type: disc;
 }
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -799,6 +805,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
 }
+.bg-red-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
 .bg-red-500{
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
@@ -809,10 +819,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-red-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 .stroke-gray-500{
   stroke: #6b7280;
@@ -834,6 +840,9 @@ video {
 }
 .p-5{
   padding: 1.25rem;
+}
+.p-4{
+  padding: 1rem;
 }
 .px-2{
   padding-left: 0.5rem;
@@ -924,6 +933,14 @@ video {
 .text-slate-200{
   --tw-text-opacity: 1;
   color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+.text-slate-600{
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+.text-slate-700{
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 .text-slate-800{
   --tw-text-opacity: 1;
@@ -1039,6 +1056,12 @@ video {
 .scrollbar-thumb-gray-300{
   --scrollbar-thumb: #d1d5db !important;
 }
+.marker\:text-orange-500 *::marker{
+  color: rgb(249 115 22 );
+}
+.marker\:text-orange-500::marker{
+  color: rgb(249 115 22 );
+}
 .hover\:bg-gray-100:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1063,31 +1086,12 @@ video {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(249 115 22 / var(--tw-ring-opacity));
 }
-@media (min-width: 100px){
-  .min-\[100px\]\:hidden{
-    display: none;
-  }
-}
-@media (min-width: 320px){
-  .min-\[320px\]\:hidden{
-    display: none;
-  }
-  .min-\[320px\]\:text-center{
-    text-align: center;
-  }
-}
 @media (min-width: 321px){
   .min-\[321px\]\:justify-center{
     justify-content: center;
   }
 }
 @media (min-width: 640px){
-  .sm\:block{
-    display: block;
-  }
-  .sm\:hidden{
-    display: none;
-  }
   .sm\:h-6{
     height: 1.5rem;
   }
@@ -1149,6 +1153,10 @@ video {
   }
   .md\:gap-y-10{
     row-gap: 2.5rem;
+  }
+  .md\:bg-white{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
   .md\:text-base{
     font-size: 1rem;
